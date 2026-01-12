@@ -15,7 +15,6 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-@ActiveProfiles("test")
 public class VectorStoreTest {
     @Autowired
     private VectorStore vectorStore;
