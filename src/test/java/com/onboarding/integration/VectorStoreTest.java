@@ -1,4 +1,4 @@
-package com.onboarding.smoketest;
+package com.onboarding.integration;
 
 
 import org.junit.jupiter.api.Test;
@@ -8,6 +8,8 @@ import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
 
 import java.util.List;
 import java.util.Map;
@@ -19,6 +21,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class VectorStoreTest {
     @Autowired
     private VectorStore vectorStore;
+
+    @DynamicPropertySource
+    static void dynamicProperties(DynamicPropertyRegistry registry) {
+        var apiKey = System.getenv("GEMINI_API_KEY");
+        if (apiKey != null) {
+            registry.add("spring.ai.google.genai.api-key", () -> apiKey);
+        }
+    }
 
     @Test
     void testVectorStoreConnectivityAndSearch() {
