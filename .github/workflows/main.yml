@@ -15,8 +15,8 @@ jobs:
       postgres:
         image: pgvector/pgvector:pg16 # Official pgvector image
         env:
-          POSTGRES_USER: testuser
-          POSTGRES_PASSWORD: testpassword
+          POSTGRES_USER: admin
+          POSTGRES_PASSWORD: password
           POSTGRES_DB: onboarding_db
         ports:
           - 5432:5432
