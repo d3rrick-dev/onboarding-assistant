@@ -20,7 +20,7 @@
 
 ### 1. Clone the Repository
 ```bash
-    git clone <your-repo-url> 
+    git clone https://github.com/d3rrick-dev/onboarding-assistant.git 
     cd onboarding-assistant
 ```
 
