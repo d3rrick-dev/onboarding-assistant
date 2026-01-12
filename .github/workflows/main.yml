@@ -44,7 +44,7 @@ jobs:
           SPRING_AI_GOOGLE_GENAI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SPRING_AI_GOOGLE_GENAI_PROJECT_ID: unused
           SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/onboarding_db
-          SPRING_DATASOURCE_USERNAME: testuser
-          SPRING_DATASOURCE_PASSWORD: testpassword
+          SPRING_DATASOURCE_USERNAME: admin
+          SPRING_DATASOURCE_PASSWORD: password
           # Set dimension to 768 for Gemini text-embedding-004
           SPRING_AI_VECTORSTORE_PGVECTOR_DIMENSIONS: 768
