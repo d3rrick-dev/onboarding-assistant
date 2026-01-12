@@ -19,7 +19,7 @@ jobs:
           POSTGRES_PASSWORD: password
           POSTGRES_DB: onboarding_db
         ports:
-          - 5432:5432
+          - 5433:5432
         # Ensure the DB is ready before the tests start
         options: >-
           --health-cmd pg_isready
